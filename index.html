@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+        div {
+            background-color: rgb(121, 44, 209);
+            margin: 10px;
+            padding: 5px;
+            color: white;
+            position: relative;
+        }
+        div:hover {
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let body = document.querySelector('body')
+        fetch('http://localhost:5000/')
+        .then(res => res.json())
+        .then(data => 
+            data.map(item => {
+                let div = document.createElement('div');
+                let id = document.createElement('p');
+                let name = document.createElement('p');
+                let surname = document.createElement('p');
+                let age = document.createElement('p');
+                id.innerText = `ID: ${item.id}`
+                name.innerText = `Name: ${item.user}`
+                surname.innerText = `Surname: ${item.surname}`
+                age.innerText = `Age: ${item.age}`
+                div.appendChild(id);
+                div.appendChild(name);
+                div.appendChild(surname);
+                div.appendChild(age);
+                body.appendChild(div);
+            })
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "user": "Ali",
+        "surname": "Aliyev",
+        "age": "28"
+    },
+    {
+        "id": 2,
+        "user": "Nuhu",
+        "surname": "Qurbanov",
+        "age": "28"
+    },
+    {
+        "id": 3,
+        "user": "Nijat",
+        "surname": "Aliyev",
+        "age": "15"
+    }
+]
